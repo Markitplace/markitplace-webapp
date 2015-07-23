@@ -1,0 +1,69 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+      <div class="row">
+        <div class="span12">
+    {% include 'flash.html' %}
+    <div class="well well-large" style="min-height:200px;">
+        <div class="pull-right">
+            <img src="{{ user.avatar(150) }}" class="img-thumbnail">
+        </div>
+        <h1>{{ user.nickname }}</h1>
+        {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+        {% if user.last_seen %}<p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p>{% endif %}
+        {#<p>{{ _('Followers:') }} {{ user.followers.count() - 1 }} | {{ _('Following:') }} {{ user.followed.count() - 1 }} |#}
+        {% if user.key == g.user.key %}
+            <a href="{{url_for('edit')}}">{{ _('Edit your profile') }}</a>
+        {#
+        {% elif not g.user.is_following(user) %}
+            <a href="{{url_for('follow', nickname=user.nickname)}}">{{ _('Follow') }}</a>
+        {% else %}
+            <a href="{{url_for('unfollow', nickname=user.nickname)}}">{{ _('Unfollow') }}</a>
+        #}
+        {% endif %}
+        </p>
+    </div>
+    
+    <div class="row">
+    <div class="col-xs-12 col-sm-6"> 
+    <div class="well">
+        <form class="form-horizontal" action="" method="post" name="post">
+            {{ form.hidden_tag() }}
+            <div class="col-lg-18">
+                <div class="input-group{% if form.post.errors %} error{% endif %}">
+                    {{ form.post(size=30, maxlength=140, class="form-control", placeholder=_('Say something')) }}
+                    {% for error in form.errors.post %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" value="{{ _('Post!') }}">{{ _('Submit') }}</button>
+                        </span>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% for post,acct in posts %}
+        {% include 'post.html' %}
+    {% endfor %}
+    </div>
+    </div>
+    {#
+    <ul class="pager">
+        {% if posts.has_prev %}
+        <li class="previous"><a href="{{ url_for('user', nickname=user.nickname, page=posts.prev_num) }}">{{ _('Newer posts') }}</a></li>
+        {% else %}
+        <li class="previous disabled"><a href="#">{{ _('Newer posts') }}</a></li>
+        {% endif %}
+        {% if posts.has_next %}
+        <li class="next"><a href="{{ url_for('user', nickname=user.nickname, page=posts.next_num) }}">{{ _('Older posts') }}</a></li>
+        {% else %}
+        <li class="next disabled"><a href="#">{{ _('Older posts') }}</a></li>
+        {% endif %}
+    </ul>
+    #}
+   </div>
+  </div>
+ </div>
+{% endblock %}

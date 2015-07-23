@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+    {% include 'flash.html' %}
+    <div class="well">
+        <form class="form-horizontal" action="" method="post" name="create_page">
+            {{ form.hidden_tag() }}
+            <div class="control-group{% if form.name.errors %} error{% endif %}">
+                <label class="control-label" for="name">{{ _('Enter a name') }}</label>
+                <div class="controls">
+                    {{ form.name(maxlength=64, class="span4") }}
+                    {% for error in form.name.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            {% if pageType == 'business' %}
+            <div class="control-group{% if form.category.errors %} error{% endif %}">
+                <label class="control-label" for="category">{{ _('Choose a category:') }}</label>
+                <div class="controls">
+                    {{ form.category(class="span4") }}
+                    {% for error in form.category.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.percentage.errors %} error{% endif %}">
+                <label class="control-label" for="percentage">{{ _('What percentage whould you like to give?') }}</label>
+                <div class="controls">
+                    {{ form.percentage(class="span4") }}
+                    {% for error in form.percentage.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.street.errors %} error{% endif %}">
+                <label class="control-label" for="street">{{ _('Street Address:') }}</label>
+                <div class="controls">
+                    {{ form.street(cols=64, rows=4, class="span4") }}
+                    {% for error in form.street.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.city.errors %} error{% endif %}">
+                <label class="control-label" for="city">{{ _('City:') }}</label>
+                <div class="controls">
+                    {{ form.city(cols=64, rows=4, class="span4") }}
+                    {% for error in form.city.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.state.errors %} error{% endif %}">
+                <label class="control-label" for="state">{{ _('State:') }}</label>
+                <div class="controls">
+                    {{ form.state(cols=64, rows=4, class="span4") }}
+                    {% for error in form.state.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.zipcode.errors %} error{% endif %}">
+                <label class="control-label" for="zipcode">{{ _('Zipcode:') }}</label>
+                <div class="controls">
+                    {{ form.zipcode(cols=64, rows=4, class="span4") }}
+                    {% for error in form.zipcode.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <div class="control-group">
+                <div class="controls">
+                    <input class="btn btn-primary" type="submit" value="Create Page">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

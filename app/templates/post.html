@@ -1,0 +1,35 @@
+<table class="table table-hover">
+    <tr>
+        <td width="70px"><a href="{{ url_for('user', nickname=acct.nickname) }}"><img src="{{ acct.avatar(70) }}" class="img-rounded"/></a></td>
+        <td>
+            
+            <div class="option-link">
+            <!-- Split button -->
+            <div class="btn-group btn-group-sm">
+                <button type="button" class="btn btn-default"><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true" title="{{ _('Options') }}"></span></a></button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    {% if post.author == g.user.key %}
+                    <li><a href="#" class="editPost" id="{{ post.key.urlsafe() }}">{{ _('Edit') }}</a></li>
+                    <li><a href="{{ url_for('delete', id=post.key.urlsafe()) }}">{{ _('Delete') }}</a></li>
+                    {% endif %}
+                    <li><a href="#">{{ _('Report this post') }}</a></li>
+                    {% if post.language != None and post.language != '' and post.language != g.local %}
+                    <li class="divider"></li>
+                    <li><a href="javascript:translate('{{ post.language }}', '{{ g.locale }}', '#post{{ post.key.id() }}', '#post{{ post.key.id() }}', '#loading{{ post.key.id() }}')">{{ _('Translate') }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            </div>
+            
+            {% autoescape false %}
+            <p>{{ _('%(nickname)s said %(when)s:', nickname = '<a href="%s">%s</a>' % (url_for('user', nickname=post.author.nickname), acct.nickname), when=momentjs(post.timestamp).fromNow()) }}</p>
+            {% endautoescape %}
+            <p><strong><span id="post{{ post.key.urlsafe() }}">{{ post.body }}</span></strong></p>
+            <p><img id="loading{{post.key.id()}}" style="display: none" src="/static/img/loading.gif"></p>
+        </td>
+    </tr>
+</table>

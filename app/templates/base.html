@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - markitplace</title>
+    {% else %}
+    <title>markitplace</title>
+    {% endif %}
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhbHqemjSehftDji5PNYzw5e7R9UC9Jp0"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
+    <style type="text/css">
+      html,body,#map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script>
+      $(document).ready(function(){
+        var pages = {{ pages|safe }}; 
+        initialize(pages);
+      });
+      </script>
+    <script>
+function translate(sourceLang, destLang, sourceId, destId, loadingId) {
+    $(destId).hide();
+    $(loadingId).show();
+    $.post('/translate', {
+        text: $(sourceId).text(),
+        sourceLang: sourceLang,
+        destLang: destLang
+    }).done(function(translated) {
+        $(destId).text(translated['text']);
+        $(loadingId).hide();
+        $(destId).show();
+    }).fail(function() {
+        $(destId).text("{{ _('Error: Could not contact server.') }}");
+        $(loadingId).hide();
+        $(destId).show();
+    });
+}
+</script>
+    {% if g.locale != 'en' %}
+    <script src="/static/js/moment-with-locales.min.js"></script>
+    <script>
+      moment.locale("{{ g.locale }}");
+    </script>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">markitplace</a>
+         </div>
+          
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="{{ url_for('index') }}">{{ _('Home') }}<span class="sr-only">(current)</span></a></li>
+             {% if g.user.is_authenticated() %}
+             <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
+             <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+             {% endif %}
+           </ul>
+           {% if g.user.is_authenticated() %}
+           <form class="navbar-form navbar-right" role="Search" action="{{ url_for('site_search') }}" method="post" name="search">
+            <div class="form-group">
+              {{ g.search_form.hidden_tag() }}{{ g.search_form.search(size=20, placeholder=_('Search'), class="form-control") }}
+            </div>
+            <button type="submit" class="btn btn-default">{{ _('Submit') }}</button>
+           </form>
+           {% endif %}
+          </div>
+       </div>
+     </nav>
+     {% block content %}{% endblock %}
+     {% include 'edit_post.html' %}
+  </body>
+</html>

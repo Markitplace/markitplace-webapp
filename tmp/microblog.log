@@ -1,0 +1,652 @@
+2015-05-17 04:08:27,673 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:10:03,860 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:11:27,610 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:17:27,085 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:18:53,310 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:19:23,861 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:20:06,953 ERROR: Exception on /edit [POST] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 99, in edit
+    if form.validate_on_submit():
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_wtf/form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/shookke/Documents/Programming/API/app/forms.py", line 22, in validate
+    user = User.query.filter_by(nickname=self.nickname.data).first()
+NameError: global name 'User' is not defined
+2015-05-17 04:20:32,223 ERROR: Exception on /edit [POST] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 99, in edit
+    if form.validate_on_submit():
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_wtf/form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/shookke/Documents/Programming/API/app/forms.py", line 22, in validate
+    user = User.query.filter_by(nickname=self.nickname.data).first()
+NameError: global name 'User' is not defined
+2015-05-17 04:22:41,560 ERROR: Exception on /edit [POST] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 99, in edit
+    if form.validate_on_submit():
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_wtf/form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/shookke/Documents/Programming/API/app/forms.py", line 22, in validate
+    return True
+NameError: global name 'User' is not defined
+2015-05-17 04:24:56,002 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:25:03,136 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-17 04:41:21,387 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:06:20,586 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:08:46,047 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:09:06,429 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:39:15,644 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:39:55,952 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:54:53,669 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 00:59:45,415 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:00:44,826 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:01:56,873 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:02:56,696 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:04:50,784 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:25:45,207 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:27:02,776 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:28:13,677 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:29:05,521 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:30:37,674 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:31:29,227 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:31:47,319 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:33:25,294 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:34:41,264 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:35:46,533 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:39:47,279 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 01:47:05,531 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:08:25,740 ERROR: Exception on /user/Kevin Shook2 [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 93, in user
+    return render_template('user.html',
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 12, in block "content"
+    <p>{{ user.followers.count() }} followers |
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'app.models.User object' has no attribute 'followers'
+2015-05-21 02:08:36,942 ERROR: Exception on /user/Kevin Shook2 [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 93, in user
+    return render_template('user.html',
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 12, in block "content"
+    <p>{{ user.followers.count() }} followers |
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'app.models.User object' has no attribute 'followers'
+2015-05-21 02:08:55,526 ERROR: Exception on /user/Kevin Shook [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 93, in user
+    return render_template('user.html',
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/user.html", line 12, in block "content"
+    <p>{{ user.followers.count() }} followers |
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'app.models.User object' has no attribute 'followers'
+2015-05-21 02:10:09,121 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:10:23,128 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:11:59,054 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:12:56,410 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:17:20,483 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:17:29,163 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:32:15,616 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:32:34,105 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:32:34,640 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:32:37,375 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 26, in index
+    @oid.loginhandler
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/base.html", line 25, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/shookke/Documents/Programming/API/app/templates/index.html", line 5, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/jinja2/environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'form' is undefined
+2015-05-21 02:33:49,610 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:34:55,188 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:42:09,739 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:42:24,043 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:43:00,206 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:45:33,656 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:51:34,801 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 02:51:50,240 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:14:51,743 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:16:20,081 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:16:46,164 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:17:49,612 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:18:32,019 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:18:35,722 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:22:47,299 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:23:05,246 ERROR: Exception on / [GET] [in /Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/shookke/Documents/Programming/API/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/shookke/Documents/Programming/API/app/views.py", line 20, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+NameError: global name 'POSTS_PER_PAGE' is not defined
+2015-05-21 03:23:36,833 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:23:55,748 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:25:36,834 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:26:06,873 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:26:12,919 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:39:05,224 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:41:40,599 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:48:09,763 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:48:17,681 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:48:19,770 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:53:21,825 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:53:41,438 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:54:00,120 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 03:55:46,141 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 04:08:30,766 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 04:08:30,801 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-21 04:09:04,674 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-22 18:50:08,842 INFO: microblog startup [in /Users/shookke/Documents/Programming/API/app/__init__.py:36]
+2015-05-23 05:46:11,601 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 05:46:12,368 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 17:11:44,446 INFO: microblog startup [in app\__init__.py:36]
+2015-05-23 22:15:10,424 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:15:11,414 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:17:39,766 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:18:36,826 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:20:21,154 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:26:31,795 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:30:25,542 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:33:44,358 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:33:45,950 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:35:41,006 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:35:46,142 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:35:47,301 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 22:46:37,405 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-23 21:07:45,920 INFO: microblog startup [in app\__init__.py:36]
+2015-05-24 03:50:59,796 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 03:54:47,220 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 03:55:21,723 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 03:55:23,184 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 03:57:39,301 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:01:48,706 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:05:11,970 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:05:22,088 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:06:11,151 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:06:12,065 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:08:46,023 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:09:27,045 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:12:45,829 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:13:20,880 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:14:13,497 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:16:05,647 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:18:12,255 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:20:19,523 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:29:07,352 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:37:11,878 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:37:13,244 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:59:25,615 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 04:59:26,520 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 06:04:23,779 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 06:04:24,420 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 06:17:26,683 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 06:17:28,799 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 06:21:26,288 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 06:21:27,680 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 17:45:28,585 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 17:55:01,684 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 17:58:56,267 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-24 17:58:57,289 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-28 22:50:13,417 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-28 22:50:16,010 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 19:28:06,493 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 19:54:59,579 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 20:33:46,354 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 20:33:47,051 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 20:33:57,311 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 21:29:19,221 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 21:30:17,148 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 21:34:27,585 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:36]
+2015-05-29 22:46:33,911 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:37]
+2015-05-29 22:46:59,486 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:38]
+2015-05-29 22:48:13,589 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-29 22:49:28,931 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-29 23:28:36,779 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-29 23:31:46,811 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-29 23:40:41,299 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-30 20:53:54,872 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-30 20:53:55,612 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-30 20:54:18,957 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-30 21:11:42,243 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-30 21:11:43,029 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:39]
+2015-05-30 21:15:14,694 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:15:15,292 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:16:13,201 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:16:13,796 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:24:16,963 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:24:17,510 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:27:21,177 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:27:21,742 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:54:08,467 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 21:57:13,046 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 22:04:14,595 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 22:04:15,535 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:41]
+2015-05-30 22:14:42,615 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-30 22:15:05,865 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-30 22:43:26,282 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-30 22:43:27,095 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-30 23:37:14,723 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-30 23:37:54,716 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:03:17,936 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:03:50,259 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:03:52,164 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:04:26,772 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:06:59,217 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:07:00,141 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:07:30,938 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:09:12,066 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:10:54,210 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 19:10:55,032 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 20:57:49,171 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 20:59:36,424 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 20:59:37,437 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 21:05:45,947 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 16:07:26,302 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:22:37,861 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:28:32,612 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:30:19,638 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:32:31,161 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:34:23,171 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:43:37,964 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:45:34,585 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 16:47:14,792 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 21:56:15,081 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 21:56:15,940 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 22:15:32,092 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 22:15:52,974 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 17:18:40,305 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 22:25:56,207 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 22:26:37,707 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 22:29:29,288 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 17:29:44,395 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 17:30:48,463 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 22:34:00,275 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 17:35:25,934 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 17:36:45,461 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 17:38:39,002 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 17:39:32,625 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 17:48:28,874 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 17:56:25,681 INFO: microblog startup [in app\__init__.py:57]
+2015-05-31 22:56:39,249 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 22:57:02,796 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 22:57:03,676 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 23:09:25,242 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 23:15:02,408 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 23:17:48,582 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 23:30:17,944 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-05-31 23:40:01,602 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:01:14,947 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:01:15,789 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:02:44,607 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:06:39,507 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:25:40,608 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:44:57,040 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 00:44:58,032 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 02:03:11,686 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 02:03:12,667 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 02:15:31,901 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-01 02:15:38,635 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 00:39:17,459 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 00:58:15,138 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 02:14:53,338 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 20:33:34,693 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 20:39:35,753 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 20:39:36,665 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 20:54:08,694 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:02:55,628 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:03:31,756 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:04:19,033 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:04:52,644 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:06:15,059 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:10:39,730 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:22:58,617 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:24:05,220 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:26:40,015 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:54:20,868 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 21:57:16,895 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:04:46,963 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:07:24,216 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:07:43,914 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:20:42,378 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:21:56,910 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:21:57,983 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:37:08,710 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:38:28,052 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:39:13,434 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:39:14,293 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 22:43:04,966 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:00:49,170 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:03:16,078 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:03:28,010 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:21:02,299 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:22:46,427 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:33:57,530 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:37:39,006 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-02 23:37:45,566 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-03 07:34:36,635 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-03 07:44:59,888 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-03 08:00:13,786 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 00:59:16,612 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 00:59:19,734 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 01:18:42,122 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 01:19:02,216 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 01:23:07,285 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 01:26:03,049 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:14:33,552 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:14:54,493 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:23:20,957 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:30:44,687 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:33:30,184 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:35:01,677 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:35:02,476 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-04 02:42:35,678 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-06 00:03:47,049 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-06 18:59:23,828 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]
+2015-06-06 19:51:17,299 INFO: microblog startup [in C:\cygwin64\home\Kevin\oumu\app\__init__.py:57]

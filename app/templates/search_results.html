@@ -1,0 +1,19 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+      <div class="row">
+        <div class="span12">
+<h1>{{ _('Search results for "%(query)s":', query = query) }}</h1>
+{% include 'flash.html' %}
+{% for result in results %}
+    {{ result }}
+    {{ result.1 }}
+    {{ result.2 }}
+    {% include 'post.html' %}
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock %}

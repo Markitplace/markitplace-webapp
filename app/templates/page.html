@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+      <div class="row">
+        <div class="span12">
+    {% include 'flash.html' %}
+    <div class="well well-large" style="min-height:200px;">
+        <h1>{{ page.name }}</h1>
+        {{ page.addresses[0].street }}
+        {{ page.addresses[0].city }}
+        {{ page.addresses[0].state }}
+        {{ page.addresses[0].zip }}
+        {% if page.about_me %}<p>{{ page.about_me }}</p>{% endif %}
+        {#<p>{{ _('Followers:') }} {{ page.followers.count() - 1 }} | {{ _('Following:') }} {{ page.followed.count() - 1 }} |#}
+        {% if page.admins[0].user == g.user.key %}
+            <a href="{{url_for('edit_page')}}">{{ _('Edit your page') }}</a>
+        {#
+        {% elif not g.user.is_following(page) %}
+            <a href="{{url_for('follow', nickname=page.nickname)}}">{{ _('Follow') }}</a>
+        {% else %}
+            <a href="{{url_for('unfollow', nickname=page.nickname)}}">{{ _('Unfollow') }}</a>
+        #}
+        {% endif %}
+        </p>
+    </div>
+    
+   
+   </div>
+  </div>
+ </div>
+{% endblock %}
